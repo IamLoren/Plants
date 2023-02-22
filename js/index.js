@@ -43,8 +43,8 @@ let plantingBtn = serviceBtns[2];
 
 gardenBtn.addEventListener('click', function() {
 
-    if (!lawnBtn.classList.contains('active') && !plantingBtn.classList.contains('active')) {
-        gardenBtn.classList.toggle('active');
+    if (!lawnBtn.classList.contains('serv-active') && !plantingBtn.classList.contains('serv-active')) {
+        gardenBtn.classList.toggle('serv-active');
 
         [...lawnCards].forEach((e) => {
             e.classList.toggle('blur')
@@ -52,13 +52,13 @@ gardenBtn.addEventListener('click', function() {
         [...plantingCards].forEach((e) => {
             e.classList.toggle('blur')
         });
-    } else if (!lawnBtn.classList.contains('active') || !plantingBtn.classList.contains('active')) {
-        gardenBtn.classList.toggle('active');
+    } else if (!lawnBtn.classList.contains('serv-active') || !plantingBtn.classList.contains('serv-active')) {
+        gardenBtn.classList.toggle('serv-active');
 
         [...gardenCards].forEach((e) => {
             e.classList.remove('blur')
         });
-        if (lawnBtn.classList.contains('active')) {
+        if (lawnBtn.classList.contains('serv-active')) {
         [...plantingCards].forEach((e) => {
                     e.classList.add('blur')
                 });
@@ -68,7 +68,7 @@ gardenBtn.addEventListener('click', function() {
             }); 
         }
     } else {
-        gardenBtn.classList.remove('active');
+        gardenBtn.classList.remove('serv-active');
         gardenBtn.classList.toggle('nonactive');
         plantingBtn.classList.remove('nonactive');
         lawnBtn.classList.remove('nonactive');
@@ -76,8 +76,8 @@ gardenBtn.addEventListener('click', function() {
 })
 
 lawnBtn.addEventListener('click', function() {
-    if (!gardenBtn.classList.contains('active') && !plantingBtn.classList.contains('active')) {
-        lawnBtn.classList.toggle('active');
+    if (!gardenBtn.classList.contains('serv-active') && !plantingBtn.classList.contains('serv-active')) {
+        lawnBtn.classList.toggle('serv-active');
 
         [...gardenCards].forEach((e) => {
             e.classList.toggle('blur')
@@ -85,13 +85,13 @@ lawnBtn.addEventListener('click', function() {
         [...plantingCards].forEach((e) => {
             e.classList.toggle('blur')
         });
-    } else if (!gardenBtn.classList.contains('active') || !plantingBtn.classList.contains('active')) {
-        lawnBtn.classList.toggle('active');
+    } else if (!gardenBtn.classList.contains('serv-active') || !plantingBtn.classList.contains('serv-active')) {
+        lawnBtn.classList.toggle('serv-active');
 
         [...lawnCards].forEach((e) => {
             e.classList.remove('blur')
         });
-        if (gardenBtn.classList.contains('active')) {
+        if (gardenBtn.classList.contains('serv-active')) {
         [...plantingCards].forEach((e) => {
                     e.classList.add('blur')
                 });
@@ -101,7 +101,7 @@ lawnBtn.addEventListener('click', function() {
             }); 
         }
     } else {
-        lawnBtn.classList.remove('active');
+        lawnBtn.classList.remove('serv-active');
         lawnBtn.classList.toggle('nonactive');
         plantingBtn.classList.remove('nonactive');
         gardenBtn.classList.remove('nonactive');
@@ -109,8 +109,8 @@ lawnBtn.addEventListener('click', function() {
 })
 
 plantingBtn.addEventListener('click', function() {
-    if (!gardenBtn.classList.contains('active') && !lawnBtn.classList.contains('active')) {
-        plantingBtn.classList.toggle('active');
+    if (!gardenBtn.classList.contains('serv-active') && !lawnBtn.classList.contains('serv-active')) {
+        plantingBtn.classList.toggle('serv-active');
 
         [...gardenCards].forEach((e) => {
             e.classList.toggle('blur')
@@ -118,13 +118,13 @@ plantingBtn.addEventListener('click', function() {
         [...lawnCards].forEach((e) => {
             e.classList.toggle('blur')
         });
-    } else if (!gardenBtn.classList.contains('active') || !plantingBtn.classList.contains('active')) {
-        plantingBtn.classList.toggle('active');
+    } else if (!gardenBtn.classList.contains('serv-active') || !plantingBtn.classList.contains('serv-active')) {
+        plantingBtn.classList.toggle('serv-active');
 
         [...plantingCards].forEach((e) => {
             e.classList.remove('blur')
         });
-        if (gardenBtn.classList.contains('active')) {
+        if (gardenBtn.classList.contains('serv-active')) {
         [...lawnCards].forEach((e) => {
                     e.classList.add('blur')
                 });
